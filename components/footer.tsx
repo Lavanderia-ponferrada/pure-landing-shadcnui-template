@@ -11,11 +11,11 @@ import Link from "next/link";
 
 const footerLinks = [
   {
-    title: "Features",
+    title: "Características",
     href: "#features",
   },
   {
-    title: "Pricing",
+    title: "Precios",
     href: "#pricing",
   },
   {
@@ -23,11 +23,11 @@ const footerLinks = [
     href: "#faq",
   },
   {
-    title: "Testimonials",
+    title: "Testimonios",
     href: "#testimonials",
   },
   {
-    title: "Privacy",
+    title: "Privacidad",
     href: "#privacy",
   },
 ];
@@ -73,10 +73,10 @@ const Footer = () => {
 
           {/* Subscribe Newsletter */}
           <div className="max-w-xs w-full">
-            <h6 className="font-semibold">Stay up to date</h6>
+            <h6 className="font-semibold">Mantente actualizado</h6>
             <form className="mt-6 flex items-center gap-2">
-              <Input type="email" placeholder="Enter your email" />
-              <Button>Subscribe</Button>
+              <Input type="email" placeholder="Tu email" />
+              <Button>Suscribirse</Button>
             </form>
           </div>
         </div>
@@ -86,9 +86,9 @@ const Footer = () => {
           <span className="text-muted-foreground text-center sm:text-start">
             &copy; {new Date().getFullYear()}{" "}
             <Link href="/" target="_blank">
-              Shadcn UI Blocks
+              Comparaelprecio
             </Link>
-            . All rights reserved.
+            . Todos los derechos reservados.
           </span>
 
           <div className="flex items-center gap-5 text-muted-foreground">

@@ -18,7 +18,6 @@ const Hero = () => {
           <p className="mt-6 max-w-[60ch] xs:text-lg">
             Encuentra las mejores ofertas comparando precios históricos de Amazon, MediaMarkt, Carrefour y más tiendas. 
             Analiza tendencias y toma decisiones inteligentes de compra.
-          </p>
           <div className="mt-12 flex flex-col sm:flex-row items-center sm:justify-center gap-4">
             <Button
               size="lg"

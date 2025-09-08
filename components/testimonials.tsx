@@ -7,57 +7,51 @@ import React, { ComponentProps } from "react";
 const testimonials = [
   {
     id: 1,
-    name: "John Doe",
-    designation: "Software Engineer",
-    company: "TechCorp",
+    name: "María García",
+    designation: "Compradora Frecuente",
+    company: "Madrid",
     testimonial:
-      "This product has completely transformed the way we work. The efficiency and ease of use are unmatched!",
-    avatar: "https://randomuser.me/api/portraits/men/1.jpg",
+      "Gracias a Comparaelprecio he ahorrado más de 300€ este año. El histórico de precios me ayuda a saber cuándo es el mejor momento para comprar.",
   },
   {
     id: 2,
-    name: "Sophia Lee",
-    designation: "Data Analyst",
-    company: "InsightTech",
+    name: "Carlos Ruiz",
+    designation: "Técnico Informático",
+    company: "Barcelona",
     testimonial:
-      "This tool has saved me hours of work! The analytics and reporting features are incredibly powerful.",
-    avatar: "https://randomuser.me/api/portraits/women/6.jpg",
+      "La función de análisis con IA es increíble. Me recomendó esperar una semana y el precio bajó exactamente como predijo.",
   },
   {
     id: 3,
-    name: "Michael Johnson",
-    designation: "UX Designer",
-    company: "DesignPro",
+    name: "Ana López",
+    designation: "Madre de Familia",
+    company: "Valencia",
     testimonial:
-      "An amazing tool that simplifies complex tasks. Highly recommended for professionals in the industry.",
-    avatar: "https://randomuser.me/api/portraits/men/3.jpg",
+      "Perfecto para comparar precios de juguetes y productos para niños. Las alertas me avisan cuando hay ofertas reales.",
   },
   {
     id: 4,
-    name: "Emily Davis",
-    designation: "Marketing Specialist",
-    company: "BrandBoost",
+    name: "David Martín",
+    designation: "Emprendedor",
+    company: "Sevilla",
     testimonial:
-      "I've seen a significant improvement in our team's productivity since we started using this service.",
-    avatar: "https://randomuser.me/api/portraits/women/4.jpg",
+      "Como revendedor, el plan Business me permite analizar tendencias del mercado y tomar mejores decisiones de inventario.",
   },
   {
     id: 5,
-    name: "Daniel Martinez",
-    designation: "Full-Stack Developer",
-    company: "CodeCrafters",
+    name: "Laura Fernández",
+    designation: "Estudiante",
+    company: "Bilbao",
     testimonial:
-      "The best investment we've made! The support team is also super responsive and helpful.",
-    avatar: "https://randomuser.me/api/portraits/men/5.jpg",
+      "Con el plan gratuito ya puedo comparar precios de libros y material de estudio. ¡Me encanta que sea gratis para empezar!",
   },
   {
     id: 6,
-    name: "Jane Smith",
-    designation: "Product Manager",
-    company: "InnovateX",
+    name: "Roberto Sánchez",
+    designation: "Jubilado",
+    company: "Zaragoza",
     testimonial:
-      "The user experience is top-notch! The interface is clean, intuitive, and easy to navigate.",
-    avatar: "https://randomuser.me/api/portraits/women/2.jpg",
+      "Muy fácil de usar. Solo pego el enlace del producto y ya veo si es una buena oferta o mejor esperar.",
   },
 ];
 
@@ -65,7 +59,7 @@ const Testimonials = () => (
   <div id="testimonials" className="flex justify-center items-center py-20">
     <div className="h-full w-full">
       <h2 className="mb-12 text-4xl md:text-5xl font-bold text-center tracking-tight px-6">
-        Testimonials
+        Lo que Dicen Nuestros Usuarios
       </h2>
       <div className="relative">
         <div className="z-10 absolute left-0 inset-y-0 w-[15%] bg-gradient-to-r from-background to-transparent" />

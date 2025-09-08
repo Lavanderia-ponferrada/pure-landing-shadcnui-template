@@ -1,48 +1,48 @@
 import {
-  BadgeDollarSign,
-  Route,
+  HelpCircle,
+  Search,
   ShieldCheck,
-  Truck,
-  Undo2,
-  UserRoundCheck,
+  TrendingUp,
+  Zap,
+  Bell,
 } from "lucide-react";
 
 const faq = [
   {
-    icon: Undo2,
-    question: "What is your return policy?",
+    icon: HelpCircle,
+    question: "¿Cómo funciona Comparaelprecio?",
     answer:
-      "You can return unused items in their original packaging within 30 days for a refund or exchange. Contact support for assistance.",
+      "Simplemente pega la URL del producto que te interesa y obtendrás instantáneamente su histórico de precios, comparación entre tiendas y análisis con IA.",
   },
   {
-    icon: Route,
-    question: "How do I track my order?",
+    icon: Search,
+    question: "¿Qué tiendas están soportadas?",
     answer:
-      "Track your order using the link provided in your confirmation email, or log into your account to view tracking details.",
+      "Actualmente soportamos Amazon, MediaMarkt, Carrefour, El Corte Inglés y estamos añadiendo nuevas tiendas constantemente.",
   },
   {
-    icon: Truck,
-    question: "Do you ship internationally?",
+    icon: TrendingUp,
+    question: "¿Qué tan preciso es el histórico de precios?",
     answer:
-      "Yes, we ship worldwide. Shipping fees and delivery times vary by location, and customs duties may apply for some countries.",
+      "Nuestros datos se actualizan diariamente y mantenemos un histórico de hasta 180 días para usuarios Pro y 1 año para Business.",
   },
   {
-    icon: BadgeDollarSign,
-    question: "What payment methods do you accept?",
+    icon: Zap,
+    question: "¿Cómo funciona el análisis con IA?",
     answer:
-      "We accept Visa, MasterCard, American Express, PayPal, Apple Pay, and Google Pay, ensuring secure payment options for all customers.",
+      "Nuestra IA analiza precios históricos, reseñas, tendencias del mercado y otros factores para darte recomendaciones personalizadas de compra.",
   },
   {
     icon: ShieldCheck,
-    question: "What if I receive a damaged item?",
+    question: "¿Es seguro usar Comparaelprecio?",
     answer:
-      "Please contact our support team within 48 hours of delivery with photos of the damaged item. We’ll arrange a replacement or refund.",
+      "Sí, no almacenamos información personal sensible y todas las conexiones están cifradas. Solo analizamos URLs públicas de productos.",
   },
   {
-    icon: UserRoundCheck,
-    question: "How can I contact customer support?",
+    icon: Bell,
+    question: "¿Cómo funcionan las alertas de precio?",
     answer:
-      "Reach out via email at support@example.com or call us at 1-800-123-4567 for assistance with any inquiries.",
+      "Configura el precio objetivo para cualquier producto y te notificaremos por email cuando baje a ese nivel o menos.",
   },
 ];
 
@@ -54,10 +54,10 @@ const FAQ = () => {
     >
       <div className="max-w-screen-lg">
         <h2 className="text-3xl xs:text-4xl md:text-5xl !leading-[1.15] font-bold tracking-tight text-center">
-          Frequently Asked Questions
+          Preguntas Frecuentes
         </h2>
         <p className="mt-3 xs:text-lg text-center text-muted-foreground">
-          Quick answers to common questions about our products and services.
+          Respuestas rápidas a las preguntas más comunes sobre nuestro comparador de precios.
         </p>
 
         <div className="mt-12 grid md:grid-cols-2 bg-background rounded-xl overflow-hidden outline outline-[1px] outline-border outline-offset-[-1px]">

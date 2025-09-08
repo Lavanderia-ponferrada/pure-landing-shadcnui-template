@@ -14,56 +14,56 @@ import { CircleCheck, CircleHelp } from "lucide-react";
 import { useState } from "react";
 
 const tooltipContent = {
-  styles: "Choose from a variety of styles to suit your preferences.",
-  filters: "Choose from a variety of filters to enhance your portraits.",
-  credits: "Use these credits to retouch your portraits.",
+  searches: "Número de búsquedas de productos que puedes realizar al mes.",
+  alerts: "Alertas de precio que puedes configurar para recibir notificaciones.",
+  ai: "Análisis con inteligencia artificial para recomendaciones personalizadas.",
 };
 
-const YEARLY_DISCOUNT = 20;
+const YEARLY_DISCOUNT = 25;
 const plans = [
   {
-    name: "Starter",
-    price: 20,
+    name: "Gratuito",
+    price: 0,
     description:
-      "Get 20 AI-generated portraits with 2 unique styles and filters.",
+      "Perfecto para usuarios ocasionales que quieren comparar precios básicos.",
     features: [
-      { title: "5 hours turnaround time" },
-      { title: "20 AI portraits" },
-      { title: "Choice of 2 styles", tooltip: tooltipContent.styles },
-      { title: "Choice of 2 filters", tooltip: tooltipContent.filters },
-      { title: "2 retouch credits", tooltip: tooltipContent.credits },
+      { title: "10 búsquedas al mes", tooltip: tooltipContent.searches },
+      { title: "Histórico de precios básico" },
+      { title: "Comparación entre tiendas" },
+      { title: "Soporte por email" },
     ],
-    buttonText: "Get 20 portraits in 5 hours",
+    buttonText: "Comenzar Gratis",
   },
   {
-    name: "Advanced",
-    price: 40,
+    name: "Pro",
+    price: 9,
     isRecommended: true,
     description:
-      "Get 50 AI-generated portraits with 5 unique styles and filters.",
+      "Ideal para compradores frecuentes que quieren maximizar sus ahorros.",
     features: [
-      { title: "3 hours turnaround time" },
-      { title: "50 AI portraits" },
-      { title: "Choice of 5 styles", tooltip: tooltipContent.styles },
-      { title: "Choice of 5 filters", tooltip: tooltipContent.filters },
-      { title: "5 retouch credits", tooltip: tooltipContent.credits },
+      { title: "Búsquedas ilimitadas", tooltip: tooltipContent.searches },
+      { title: "Histórico completo (180 días)" },
+      { title: "5 alertas de precio", tooltip: tooltipContent.alerts },
+      { title: "Análisis con IA", tooltip: tooltipContent.ai },
+      { title: "Soporte prioritario" },
     ],
-    buttonText: "Get 50 portraits in 3 hours",
+    buttonText: "Empezar Prueba Pro",
     isPopular: true,
   },
   {
-    name: "Premium",
-    price: 80,
+    name: "Business",
+    price: 29,
     description:
-      "Get 100 AI-generated portraits with 10 unique styles and filters.",
+      "Para empresas y revendedores que necesitan análisis avanzados de mercado.",
     features: [
-      { title: "1-hour turnaround time" },
-      { title: "100 AI portraits" },
-      { title: "Choice of 10 styles", tooltip: tooltipContent.styles },
-      { title: "Choice of 10 filters", tooltip: tooltipContent.filters },
-      { title: "10 retouch credits", tooltip: tooltipContent.credits },
+      { title: "API de acceso" },
+      { title: "Histórico extendido (1 año)" },
+      { title: "Alertas ilimitadas", tooltip: tooltipContent.alerts },
+      { title: "Análisis IA avanzado", tooltip: tooltipContent.ai },
+      { title: "Dashboard empresarial" },
+      { title: "Soporte 24/7" },
     ],
-    buttonText: "Get 100 portraits in 1 hour",
+    buttonText: "Contactar Ventas",
   },
 ];
 
@@ -76,7 +76,7 @@ const Pricing = () => {
       className="flex flex-col items-center justify-center py-12 xs:py-20 px-6"
     >
       <h1 className="text-3xl xs:text-4xl md:text-5xl font-bold text-center tracking-tight">
-        Pricing
+        Planes y Precios
       </h1>
       <Tabs
         value={selectedBillingPeriod}
@@ -85,10 +85,10 @@ const Pricing = () => {
       >
         <TabsList className="h-11 px-1.5 rounded-full bg-primary/5">
           <TabsTrigger value="monthly" className="py-1.5 rounded-full">
-            Monthly
+            Mensual
           </TabsTrigger>
           <TabsTrigger value="yearly" className="py-1.5 rounded-full">
-            Yearly (Save {YEARLY_DISCOUNT}%)
+            Anual (Ahorra {YEARLY_DISCOUNT}%)
           </TabsTrigger>
         </TabsList>
       </Tabs>
@@ -102,17 +102,18 @@ const Pricing = () => {
           >
             {plan.isPopular && (
               <Badge className="absolute top-0 right-1/2 translate-x-1/2 -translate-y-1/2">
-                Most Popular
+                Más Popular
               </Badge>
             )}
             <h3 className="text-lg font-medium">{plan.name}</h3>
             <p className="mt-2 text-4xl font-bold">
-              $
+              {plan.price === 0 ? "Gratis" : `€${
               {selectedBillingPeriod === "monthly"
                 ? plan.price
-                : plan.price * ((100 - YEARLY_DISCOUNT) / 100)}
+                : Math.round(plan.price * ((100 - YEARLY_DISCOUNT) / 100))}
+              }`}
               <span className="ml-1.5 text-sm text-muted-foreground font-normal">
-                /month
+                {plan.price === 0 ? "" : "/mes"}
               </span>
             </p>
             <p className="mt-4 font-medium text-muted-foreground">
